@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dbuser
+    username: root
+    password: Crediti20$
+  jpa:
+    database: mysql
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:h2:mem:unit-test-1
+    username: test
+    password: test
+    driver-class-name:  org.h2.Driver
+  jpa:
+    database: h2
+  h2:
+    console:
+      enabled: true
+
