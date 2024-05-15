@@ -1,9 +1,12 @@
 package co.develhope.testController.entities;
 
+import lombok.Builder;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
